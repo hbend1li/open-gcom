@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Embedded GCOM</title>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/semantic.min.js"></script>
+    <link   type="text/css" rel="stylesheet" href="css/semantic.min.css">
+
+</head>
+<body>
+    <div class="ui top fixed menu">
+      <div class="item">
+        <img src="/images/logo.png">
+      </div>
+      <a class="item">Features</a>
+      <a class="item">Testimonials</a>
+      <a class="item">Sign-in</a>
+    </div>
+
+
+
+    <div class="ui tow column doubling stackable grid container">
+        <div class="lg_hd">
+            <img src="img/cosider.png">
+            <!--Welcome to<br>
+            <span>COSIDER CONSTRUCTION</span-->
+        </div>
+        <div class="lg_bd">
+            <form method="post" autocomplete="off">
+                <input type="text"     name="username" size="15" placeholder="Nom de connexion" value>
+                <input type="password" name="password" size="15" placeholder="Mot de passe" value>
+                <?php
+                    if (isset($_SESSION['captcha']))
+                        echo '<img src="../img/captcha.php" /><input type="text" name="captcha" size="8" placeholder="Entrez le code ci-dessus" value>';
+                ?>
+                <input type="submit"   value="Connexion">
+                <br/><br/>
+            </form>
+        </div>
+        <div class="lg_ft">
+            <!--?php echo $msg; ?-->
+        </div>      
+    </div>
+
+
+</body>
+</html>
+
+
